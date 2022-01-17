@@ -11,3 +11,5 @@ Progress Tracker MVP
 5) Using a flow chart, show the work/user flow of the MVP, to determine how the functionality of the app will operate.
 
 6) Using diagrams, accurately show the information flow between data structures in the app.
+
+7) Development commit

@@ -8,8 +8,8 @@ const pool = new pg.Pool({
   host: db.host,
   database: db.database,
   password: db.password,
-  port: db.host,
-  // ssl: true
+  port: db.port,
+  ssl: false,
 });
 
 // const pool = new Pool();

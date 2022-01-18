@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "start": "node -r dotenv/config ./bin/www.js",
-    "dbcreatetable": "node -r dotenv/config ./db/index.js"
+    "dbcreatetable": "node -r dotenv/config ./db/Scripts/createdbtable.js",
+    "dbpopulatetable": "node -r dotenv/config ./db/Scripts/populatedbtable.js"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",

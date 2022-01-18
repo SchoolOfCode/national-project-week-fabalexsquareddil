@@ -1,25 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import Sidebar from './Components/Sidebar/Sidebar';
+import Main from './Components/Main/Main';
+import { useState } from 'react';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	let [day, setDay] = useState(1);
+	let [week, setWeek] = useState(1);
+	return (
+		<div className='App'>
+			<header className='App-header'>
+				<Sidebar setDay={setDay} setWeek={setWeek} />
+				<Main week={week} day={day} />
+			</header>
+		</div>
+	);
 }
 
 export default App;

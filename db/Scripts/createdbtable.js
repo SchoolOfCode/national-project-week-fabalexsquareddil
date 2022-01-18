@@ -6,20 +6,10 @@ import query from "../index.js";
 //table for subjects(hardcoded with the options, each subkects have an id)
 //use innerjoin to match the id from the main table(topics) to the id in subjects tables
 //
+const sqlString = `CREATE TABLE IF NOT EXISTS bc-tracker (id SERIAL PRIMARY KEY, week/day TEXT, subject ARRAY, topics ARRAY)`;
 
-query(
-  `CREATE TABLE IF NOT EXISTS bc-tracker (id SERIAL PRIMARY KEY, week/day TEXT, subject ARRAY, topics ARRAY)`
-);
-// const topic = {
-//   topicName: useEffect,
-//   complete: true,
-// };
-
-// const sqlString =
-//   "CREATE TABLE IF NOT EXISTS userScores (id SERIAL PRIMARY KEY, user TEXT, score INT)";
-
-// async function createScoreTable() {
-//   const res = await query(sqlString);
-//   console.log(res);
-// }
-// createScoreTable();
+async function createDatabaseTable() {
+  const res = await query(sqlString);
+  console.log(res);
+}
+createDatabaseTable();

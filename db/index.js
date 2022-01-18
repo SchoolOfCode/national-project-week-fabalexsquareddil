@@ -16,9 +16,10 @@ const pool = new pg.Pool({
   database: db.database,
   password: db.password,
   port: db.port,
-  //ssl: false,
+  ssl: {rejectUnauthorized: false},
 });
 
+//process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0"
 // const pool = new Pool();
 export default function query(text, params) {
   return pool.query(text, params);

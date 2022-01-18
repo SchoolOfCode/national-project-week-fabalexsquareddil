@@ -6,10 +6,10 @@ import query from "../index.js";
 //table for subjects(hardcoded with the options, each subkects have an id)
 //use innerjoin to match the id from the main table(topics) to the id in subjects tables
 //
-const sqlString = `CREATE TABLE IF NOT EXISTS bc-tracker (id SERIAL PRIMARY KEY, week/day TEXT, subject ARRAY, topics ARRAY)`;
+query(`CREATE TABLE IF NOT EXISTS bc_tracker (id SERIAL PRIMARY KEY, week_day VARCHAR, subject VARCHAR, topics VARCHAR)`);
 
-async function createDatabaseTable() {
-  const res = await query(sqlString);
-  console.log(res);
-}
-createDatabaseTable();
+// async function createDatabaseTable() {
+//   const res = await query(sqlString);
+//   console.log(res);
+// }
+// createDatabaseTable();

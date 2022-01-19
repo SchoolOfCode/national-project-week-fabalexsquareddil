@@ -9,6 +9,7 @@ export default function Main({ week, day }) {
 	function submitHandler(e) {
 		e.preventDefault();
 		const topic = {
+			id: 1,
 			week: week,
 			day: day,
 			content: input,
